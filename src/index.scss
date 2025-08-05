@@ -1,0 +1,123 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.lists-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.points{
+    width: 200px;
+    background-color: #333;
+    color: white;
+}
+.todo,
+.done-list {
+  flex: 1 1 45%;
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  box-sizing: border-box;
+}
+
+.todo > div,
+.done-list > div {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo > div:last-child,
+.done-list > div:last-child {
+  border-bottom: none;
+}
+
+h3,
+h1 {
+  margin: 0 0 0.3rem 0;
+  color: #444;
+}
+
+p {
+  margin: 0 0 0.8rem 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+button {
+  align-self: flex-start;
+  background-color: #4caf50;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3b8a40;
+}
+
+button.delete {
+  background-color: #e74c3c;
+}
+
+button.delete:hover {
+  background-color: #c0392b;
+}
+
+button.delete:active {
+  background-color: #a93226;
+}
+
+.points {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+@media (max-width: 900px) {
+  .lists-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .todo,
+  .done-list {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
